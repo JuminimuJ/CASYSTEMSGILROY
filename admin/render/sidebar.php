@@ -33,8 +33,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="manage_logo.php"><i class="fas fa-circle"></i> Update Logo</a>
-                        <a class="collapse-item" href="manage_colortheme.php"><i class="fas fa-palette"></i> Change Color Theme</a>
+                        <a class="collapse-item" data-toggle="modal" data-target="#modalupdLogo" href="manage_logo.php"><i class="fas fa-circle"></i> Update Logo</a>
+                        <a class="collapse-item" data-toggle="modal" data-target="#modalupdColorTheme" href="manage_colortheme.php"><i class="fas fa-palette"></i> Change Color Theme</a>
                         <a class="collapse-item" href="manage_social.php"><i class="fas fa-network-wired"></i> Social Networks</a>
                         <a class="collapse-item" href="manage_other.php"><i class="fas fa-cogs"></i> Other</a>
                     </div>
