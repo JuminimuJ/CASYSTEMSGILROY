@@ -50,27 +50,42 @@ if(isset($_SESSION["username"] ))
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-12 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
-                            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            	<form method="post" action="php/update_page.php">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-address-card"></i> About</h6>
 
                                     <div class="dropdown">
-                                          <button class="btn btn-outline-info rounded-0"><i class="fas fa-save"></i> Save Changes</button>
+                                        <button type="submit" name="btnupdabout" class="btn btn-outline-info rounded-0"><i class="fas fa-save"></i> Save Changes</button>
 
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
-                                          </div>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
                                         </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-md-12">
-                                            <textarea name="editor1" id="editor1" rows="10" cols="80">
-                                                This is my textarea to be replaced with CKEditor 4.
+                                            <?php
+                                            $sql = "SELECT * FROM `page_about` WHERE 1";
+                                            $query = $conn->query($sql);
+
+                                            $content = '';
+                                            if($query->num_rows == 0)
+                                            {
+                                                $content = 'No Content...';
+                                            }else{
+                                                $row = $query->fetch_array();
+                                                $content = $row[1];
+                                            }
+                                            ?>
+                                            <textarea name="content_about" id="editor1" rows="10" cols="80">
+                                               <?php echo $content;?>
                                             </textarea>
                                         </div>
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
 
