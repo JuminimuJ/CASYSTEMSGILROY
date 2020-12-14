@@ -122,7 +122,7 @@ if(isset($_SESSION["username"] ))
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
+    <?php include('modal/utils.php');?>
     <?php include('modal/logout.php');?>
 
     <?php include('render/js.php');?>
