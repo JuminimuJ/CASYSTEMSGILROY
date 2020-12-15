@@ -45,7 +45,7 @@ if(isset($_SESSION["username"] ))
 
                                 <form method="post" action="manage_socila.php">
                             	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-network"></i> Social Networks</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-fw fa-address-book"></i> Contact</h6>
 
                                     <button class="btn btn-outline-success rounded-0"><i class="fas fa-save"></i> Save Changes</button>
                                 </div>
@@ -53,19 +53,38 @@ if(isset($_SESSION["username"] ))
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-md-12 table">
                                             <table style="width:100%;" class="table">
-                                                
+                                                <thead>
+                                                    <tr>
+                                                        
+                                                        
+                                                    </tr>
+                                                </thead>
                                                 <tbody>
                                                     <?php 
-                                                    $sql = "SELECT * FROM `acc_social` WHERE 1";
+                                                    $sql = "SELECT * FROM `page_contact` WHERE 1";
                                                     $query = $conn->query($sql);
                                                     while($row = $query->fetch_array())
                                                     {
                                                     ?>
-                                                    <tr>
-                                                        <td><i class="fas <?php echo $row[3];?>"></i> <?php echo $row[1];?></td>
-                                                        <td><input type="text" name="social_<?php echo $row[1];?>" class="form-control" value="<?php echo $row[2];?>"></td>
-                                                        <td><button class="btn btn-outline-danger rounded-0"><i class="fas fa-times"></i></button></td>
-                                                    </tr>
+                <tr>
+                    <th>Address:</th><th><textarea name="address" class="form-control"><?php echo $row[1]?></textarea></th>
+                </tr>
+                <tr>
+                    <th>Phone Number:</th><th><input type="text" name="pnum" value="<?php echo $row[2]?>" class="form-control"></th>
+                </tr>
+                <tr>
+                    <th>Mobile Number:</th><th><input type="text" name="mnum1" value="<?php echo $row[3]?>" class="form-control"></th>
+                </tr>
+                <tr>
+                    <th>Mobile Number (Alt):</th><th><input type="text" name="mnum2" value="<?php echo $row[4]?>" class="form-control"></th>
+                </tr>
+                <tr>
+                    <th>Primary Email :</th><th><input type="email" name="email1" value="<?php echo $row[5]?>" class="form-control"></th>
+                </tr>
+                <tr>
+                    <th>Secondary Email (Staff):</th><th><input type="email" name="email2" value="<?php echo $row[6]?>" class="form-control"></th>
+                </tr>                                        
+                                                    
                                                     <?php
                                                     }
                                                     ?>
