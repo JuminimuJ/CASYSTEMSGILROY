@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2020 at 05:52 AM
+-- Generation Time: Dec 15, 2020 at 09:19 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -78,6 +78,27 @@ CREATE TABLE `acc_social` (
   `icon` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `acc_social`
+--
+
+INSERT INTO `acc_social` (`id`, `social`, `link`, `icon`) VALUES
+(1, 'Facebook', 'https://www.facebook.com/haidee.liwanag', 'fa-facebook'),
+(2, 'Youtube', 'https://www.youtube.com/channel/UC2nus9lm-pOaSXPPetTaVXw', 'fa-youtube'),
+(3, 'Dailymotion', '', 'fa-dailymotion'),
+(4, 'Messenger', '', 'fa-messenger'),
+(5, 'Blogger', '', 'fa-blogger'),
+(6, 'Reddit', '', 'fa-reddit'),
+(7, 'Pinterest', '', 'fa-pinterest'),
+(8, 'Linkedin', '', 'fa-linkedin-square'),
+(9, 'google-plus', '', 'fa-google-plus'),
+(10, 'Skype', '', 'fa-skype'),
+(11, 'Vimeo', '', 'fa-vimeo'),
+(12, 'Whatsapp', '', 'fa-whatsapp'),
+(13, 'Twitter', '', 'fa-twitter'),
+(14, 'Instagram', '', 'fa-instagram'),
+(15, 'Shopify', '', 'fa-shopify');
+
 -- --------------------------------------------------------
 
 --
@@ -122,6 +143,30 @@ INSERT INTO `page_about` (`id`, `about_content`, `last_updated`, `status`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `page_contact`
+--
+
+CREATE TABLE `page_contact` (
+  `id` int(11) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `phone_num` varchar(255) NOT NULL,
+  `mobile_num1` varchar(255) NOT NULL,
+  `mobile_num2` varchar(255) NOT NULL,
+  `email1` varchar(255) NOT NULL,
+  `email2` varchar(255) NOT NULL,
+  `last_updated` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `page_contact`
+--
+
+INSERT INTO `page_contact` (`id`, `address`, `phone_num`, `mobile_num1`, `mobile_num2`, `email1`, `email2`, `last_updated`) VALUES
+(1, 'Gilroy, CA 95020', '', '+1 408-767-2816', '', 'info@example.com', 'contact@example.com', '2020-12-15 14:57:30');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `page_product`
 --
 
@@ -139,7 +184,7 @@ CREATE TABLE `page_product` (
 --
 
 INSERT INTO `page_product` (`id`, `prod_title`, `prod_desc`, `prod_img`, `last_updated`, `status`) VALUES
-(1, 'test', 'test', 'bubble-milk-tea_1607962785.png', '2020-12-15 00:19:45', 1);
+(2, 'Rice Cooker', '', 'ricecooker_1608020319.jpg', '2020-12-15 16:18:39', 1);
 
 -- --------------------------------------------------------
 
@@ -204,6 +249,12 @@ ALTER TABLE `page_about`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `page_contact`
+--
+ALTER TABLE `page_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `page_product`
 --
 ALTER TABLE `page_product`
@@ -235,7 +286,7 @@ ALTER TABLE `acc_pages`
 -- AUTO_INCREMENT for table `acc_social`
 --
 ALTER TABLE `acc_social`
-  MODIFY `id` int(55) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `acc_user`
@@ -244,10 +295,16 @@ ALTER TABLE `acc_user`
   MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `page_contact`
+--
+ALTER TABLE `page_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `page_product`
 --
 ALTER TABLE `page_product`
-  MODIFY `id` int(155) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(155) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `page_services`
