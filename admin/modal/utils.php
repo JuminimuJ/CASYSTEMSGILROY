@@ -50,18 +50,19 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label>Current Logo:</label><br/>
+          <label>Current:</label><br/>
             <?php 
               $sql_color = "SELECT * FROM `acc_color_theme` WHERE 1";
               $query_color = $conn->query($sql_color);
               $row_color = $query_color->fetch_array();
             ?>
+            #444444
             <i class="fas fa-cirle fa-3x" style="color:<?php echo $row_color[1];?>;"></i>
         </div>
 
         <div class="form-group">
             <label>Select Color Theme:</label>
-            <input type="color" id="colorpicker" value="#0000ff" class="form-control">
+            <input type="color" id="colorpicker" value="#444444" class="form-control">
         </div>
 
       </div>
