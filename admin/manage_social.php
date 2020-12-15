@@ -44,7 +44,7 @@ if(isset($_SESSION["username"] ))
                             	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-network"></i> Social Networks</h6>
 
-                                    <button class="btn btn-outline-dark"><i class="fas fa-plus"></i> Add Social Network</button>
+                                    <button class="btn btn-outline-dark rounded-0"><i class="fas fa-plus"></i> Add Social Network</button>
                                 </div>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -54,20 +54,19 @@ if(isset($_SESSION["username"] ))
                                                     <tr>
                                                         <th>Title</th>
                                                         <th>Link</th>
-                                                        <th>Icon</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <?php ?>
                                                     <tr>
-                                                        <td>    </td>
                                                         <td></td>
                                                         <td></td>
                                                         <td>
                                                             
                                     <div class="dropdown">
-                                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Action
+                                          <button class="btn btn-outline-dark dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-cog"></i> Action
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
