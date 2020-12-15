@@ -235,7 +235,7 @@ if(isset($_SESSION["username"] ))
                                             </div>
 
                                             <div class="form-group">
-                                                <label>Google Map:</label>
+                                                <label>Google Map (Paste Embedded iframe):</label>
                                                 <textarea placeholder="Paste your embedded google map iframe here..." class="form-control rounded-0"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101952.87185616796!2d-121.65117154007146!3d37.00914637254441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091e3b91553cecb%3A0xaefd0c1ba527283b!2sGilroy%2C%20CA%2095020%2C%20USA!5e0!3m2!1sen!2sph!4v1608019518142!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></textarea>
                                                 <code><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101952.87185616796!2d-121.65117154007146!3d37.00914637254441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091e3b91553cecb%3A0xaefd0c1ba527283b!2sGilroy%2C%20CA%2095020%2C%20USA!5e0!3m2!1sen!2sph!4v1608019518142!5m2!1sen!2sph" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></code>
                                             </div>
